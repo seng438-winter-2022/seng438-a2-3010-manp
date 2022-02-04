@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="EqualsTest" project="JFreeChart" tests="4" started="4" failures="0" errors="1" ignored="0">
+  <testsuite name="org.jfree.data.test.EqualsTest" time="0.001">
+    <testcase name="testingSameLowerBoundRangeObject" classname="org.jfree.data.test.EqualsTest" time="0.001">
+      <error>java.lang.Error: Unresolved compilation problem: 
+	Syntax error, insert ")" to complete Expression
+&#13;
+	at org.jfree.data.test.EqualsTest.testingSameLowerBoundRangeObject(EqualsTest.java:36)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:45)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:42)&#13;
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)&#13;
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)&#13;
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:30)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:263)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:68)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:93)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:529)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:756)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)&#13;
+&#13;
+</error>
+    </testcase>
+    <testcase name="testingDifferentRangeObject" classname="org.jfree.data.test.EqualsTest" time="0.0"/>
+    <testcase name="testingSameRangeObject" classname="org.jfree.data.test.EqualsTest" time="0.0"/>
+    <testcase name="testingStringObject" classname="org.jfree.data.test.EqualsTest" time="0.0"/>
+  </testsuite>
+</testrun>

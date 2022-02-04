@@ -1,0 +1,30 @@
+package org.jfree.data.test;
+
+import static org.junit.Assert.*;
+import org.junit.*;
+import org.jfree.data.Range;
+import org.junit.Test;
+
+public class EqualsTest{
+	
+	private Range testR;
+	
+	@Before
+	public void setUp() throws Exception
+	{
+	testR = new Range(10, 20);
+	}
+	@Test
+	public void testingDifferentRangeObject() {
+		Range test = new Range(50, 60);
+		assertEquals("Testing a Different Range Object",true, testR.equals(test));
+	}
+	
+	@After
+	public void tearDown()
+	{
+		System.out.println("Tear DOwn");
+		testR = null;
+	}
+
+}
