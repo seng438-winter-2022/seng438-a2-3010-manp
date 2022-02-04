@@ -17,19 +17,19 @@ public void setUp() throws Exception
 	testR3 = new Range (-10, -5);
 	}
 @Test
-public void getLengthWithDifferentUpperAndLowerBounds() {
+public void testDifferentUpperAndLowerBoundsForMethodGetLength() {
 
 	assertEquals("The expected length of the Range is.", 20, testR.getLength(), .0001d);
 }
 
 @Test
-public void getLengthWithSameUpperAndLowerBounds() {
+public void testSameUpperAndLowerBoundsForMethodGetLength() {
 
 	assertEquals("The expected length of the Range is.", 0, testR2.getLength(), .0001d);
 }
 
 @Test
-public void getLengthWithNegativeUpperAndLowerBounds() {
+public void testNegativeUpperAndLowerBoundsForMethodGetLength() {
 
 	assertEquals("The expected length of the Range is.", 5, testR3.getLength(), .0001d);
 }
