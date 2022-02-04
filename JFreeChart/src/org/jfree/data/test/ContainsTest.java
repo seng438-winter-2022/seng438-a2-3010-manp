@@ -22,13 +22,13 @@ public void testValueInRangeForMethodContains() {
 @Test
 public void testValueLessThanLowerBoundForMethodContains() {
 
-	assertEquals("The value is less than lower bound range value and does not lie in Range.", false, testR.contains(-10.0));
+	assertEquals("The value is less than lower bound range value and lies inside Range.", false, testR.contains(-10.0));
 }
 
 @Test
 public void testValueMoreThanUpperBoundForMethodContains() {
 
-	assertEquals("The value is more than upper bound range value and does not lie in Range.", false, testR.contains(40.0));
+	assertEquals("The value is more than upper bound range value and lies inside Range.", false, testR.contains(40.0));
 }
 
 
