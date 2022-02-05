@@ -23,9 +23,9 @@ public class GetCumulativePercentages {
     	mockingContext2 = new Mockery();
     }
 
-
+    //A test to pass null object as an argument to see if method can correctly throws an exception
     @Test
-    public void TestNullForMethodGetCumulativePercentages(){
+    public void TestExceptionForMethodGetCumulativePercentages(){
     	boolean flag = false;
     	try {
     		DataUtilities.getCumulativePercentages(null);
@@ -36,6 +36,7 @@ public class GetCumulativePercentages {
     	assertTrue("Test with null argument",flag);
     }
     
+    //A test use all positive key and value within KeyedValues object to see if method can work correctly
     @Test
     public void TestPositiveForMethodGetCumulativePercentages() {
     	final KeyedValues input = mockingContext.mock(KeyedValues.class);
@@ -86,7 +87,119 @@ public class GetCumulativePercentages {
     	assertEquals("testing with all positive values", true, DataUtilities.getCumulativePercentages(input).equals(output));
     }
     
+  //A test use all negative key and value within KeyedValues object to see if method can work correctly
+    @Test
+    public void TestNegativeForMethodGetCumulativePercentages() {
+    	final KeyedValues input = mockingContext.mock(KeyedValues.class);
+    	mockingContext.checking(new Expectations(){
+    		{
+        		atLeast(1).of(input).getItemCount();
+        		will(returnValue(3));
+        		
+        		atLeast(1).of(input).getKey(0);
+        		will(returnValue(0));
+        		atLeast(1).of(input).getKey(1);
+        		will(returnValue(-1));
+        		atLeast(1).of(input).getKey(2);
+        		will(returnValue(-2));
+        		
+        		atLeast(1).of(input).getValue(0);
+        		will(returnValue(-10));
+        		atLeast(1).of(input).getValue(1);
+        		will(returnValue(-20));
+        		atLeast(1).of(input).getValue(2);
+        		will(returnValue(-30));
+        		
+    		}
+    	});
+    	
+    	final KeyedValues output = mockingContext2.mock(KeyedValues.class);
+    	mockingContext2.checking(new Expectations(){
+    		{
+        		atLeast(1).of(output).getItemCount();
+        		will(returnValue(3));
+        		
+        		atLeast(1).of(output).getKey(0);
+        		will(returnValue(0));
+        		atLeast(1).of(output).getKey(1);
+        		will(returnValue(-1));
+        		atLeast(1).of(output).getKey(2);
+        		will(returnValue(-2));
+        		
+        		atLeast(1).of(output).getValue(0);
+        		will(returnValue(-10/-60));
+        		atLeast(1).of(output).getValue(1);
+        		will(returnValue(-30/-60));
+        		atLeast(1).of(output).getValue(2);
+        		will(returnValue(-60/-60));
+        		
+    		}
+    	});
+    	assertEquals("testing with all negative values", true, DataUtilities.getCumulativePercentages(input).equals(output));
+    }
     
+    //A test use both positive, negative and different decimal number to see if method can work correctly
+    @Test
+    public void TestMixForMethodGetCumulativePercentages() {
+    	final KeyedValues input = mockingContext.mock(KeyedValues.class);
+    	mockingContext.checking(new Expectations(){
+    		{
+        		atLeast(1).of(input).getItemCount();
+        		will(returnValue(3));
+        		
+        		atLeast(1).of(input).getKey(0);
+        		will(returnValue(1.0));
+        		atLeast(1).of(input).getKey(1);
+        		will(returnValue(1.1));
+        		atLeast(1).of(input).getKey(2);
+        		will(returnValue(1.2));
+        		
+        		atLeast(1).of(input).getValue(0);
+        		will(returnValue(10.5));
+        		atLeast(1).of(input).getValue(1);
+        		will(returnValue(-5.3));
+        		atLeast(1).of(input).getValue(2);
+        		will(returnValue(7.99));
+        		
+    		}
+    	});
+    	
+    	final KeyedValues output = mockingContext2.mock(KeyedValues.class);
+    	mockingContext2.checking(new Expectations(){
+    		{
+        		atLeast(1).of(output).getItemCount();
+        		will(returnValue(3));
+        		
+        		atLeast(1).of(output).getKey(0);
+        		will(returnValue(1.0));
+        		atLeast(1).of(output).getKey(1);
+        		will(returnValue(1.1));
+        		atLeast(1).of(output).getKey(2);
+        		will(returnValue(1.2));
+        		
+        		atLeast(1).of(output).getValue(0);
+        		will(returnValue(10.5/(10.5-5.3+7.99)));
+        		atLeast(1).of(output).getValue(1);
+        		will(returnValue((10.5-5.3)/(10.5-5.3+7.99)));
+        		atLeast(1).of(output).getValue(2);
+        		will(returnValue((10.5-5.3+7.99)/(10.5-5.3+7.99)));
+        		
+    		}
+    	});
+    	assertEquals("testing with mixed values", true, DataUtilities.getCumulativePercentages(input).equals(output));
+    }
+    
+  //A test to see if passing a null object as an argument will be accepted
+    @Test
+    public void TestNullForMethodGetCumulativePercentages(){
+    	boolean flag = false;
+    	try {
+    		DataUtilities.getCumulativePercentages(null);
+    		flag = true;
+    	}catch(Exception e){
+    	}
+    	assertFalse("Test with null argument",flag);
+    }
 
     @After
     public void tearDown() throws Exception {
