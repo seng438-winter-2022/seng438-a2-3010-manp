@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 import org.jfree.data.Range;
 import org.junit.*;
 
+//to test ToString method within Range class
 public class ToStringTest {
 	private Range test1;
 	private Range test2;
