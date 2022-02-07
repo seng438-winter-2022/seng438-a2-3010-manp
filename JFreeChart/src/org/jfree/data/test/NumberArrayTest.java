@@ -14,12 +14,10 @@ public class NumberArrayTest extends DataUtilities {
 	
 	final double[] input = {10.005, 20.0, 30.095};
 	final double[] input2 = {-10.005, -20.0, -30.095};
-	final double[] input3 = {+10.005, +20.0, -30.005};
 	
 	final Number[] result = {10.005, 20.0, 30.095};
 	final Number[] result2 = {-10.005, -20.0, -30.095};
-	final Number[] result3 = {+10.005, +20.0, -30.005};
-	
+
 	@Before
 	public void setup() {
 
@@ -42,11 +40,6 @@ public class NumberArrayTest extends DataUtilities {
     @Test
     public void CreatingNumberArrayNegativeValues() {
  	   assertArrayEquals("Number array do not correspond to double array",result2, DataUtilities.createNumberArray(input2));
-    }
-
-    @Test
-    public void CreatingNumberArrayMixValues() {
- 	   assertArrayEquals("Number array do not correspond to double array",result3, DataUtilities.createNumberArray(input3));
     }
 
 }
