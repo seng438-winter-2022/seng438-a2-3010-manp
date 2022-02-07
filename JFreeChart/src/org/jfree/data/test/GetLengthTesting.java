@@ -25,7 +25,7 @@ public void testDifferentUpperAndLowerBoundsForMethodGetLength() {
 	assertEquals("The expected length of the Range is.", 20, testR.getLength(), .0001d);
 }
 
-/* Checking to see if getLength() for both the upper and lower bound being the same */
+/* Checking to see if getLength() returns the expected value for a given input */
 @Test
 public void testSameUpperAndLowerBoundsForMethodGetLength() {
 
