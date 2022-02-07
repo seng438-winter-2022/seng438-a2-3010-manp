@@ -9,6 +9,7 @@ public class GetLengthTesting {
 private Range testR;
 private Range testR2;
 private Range testR3;
+/* Ranges are created for testing */
 @Before
 public void setUp() throws Exception
 	{
@@ -16,18 +17,21 @@ public void setUp() throws Exception
 	testR2 = new Range (20, 20);
 	testR3 = new Range (-10, -5);
 	}
+
+/* Testing to see if expected value will be returned from getLenght() for given valid input */
 @Test
 public void testDifferentUpperAndLowerBoundsForMethodGetLength() {
 
 	assertEquals("The expected length of the Range is.", 20, testR.getLength(), .0001d);
 }
 
+/* Checking to see if getLength() for both the upper and lower bound being the same */
 @Test
 public void testSameUpperAndLowerBoundsForMethodGetLength() {
 
 	assertEquals("The expected length of the Range is.", 0, testR2.getLength(), .0001d);
 }
-
+/* Checking to see if getLength() positive value for negative range */
 @Test
 public void testNegativeUpperAndLowerBoundsForMethodGetLength() {
 
