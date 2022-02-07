@@ -35,17 +35,17 @@ public class NumberArrayTest extends DataUtilities {
     }
 	
     @Test
-    public void CreatignNumberArrayPositiveValues() {
+    public void CreatingNumberArrayPositiveValues() {
  	   assertArrayEquals("Number array do not correspond to double array",result, DataUtilities.createNumberArray(input));
     }
 
     @Test
-    public void CreatignNumberArrayNegativeValues() {
+    public void CreatingNumberArrayNegativeValues() {
  	   assertArrayEquals("Number array do not correspond to double array",result2, DataUtilities.createNumberArray(input2));
     }
 
     @Test
-    public void CreatignNumberArrayMixValues() {
+    public void CreatingNumberArrayMixValues() {
  	   assertArrayEquals("Number array do not correspond to double array",result3, DataUtilities.createNumberArray(input3));
     }
 
