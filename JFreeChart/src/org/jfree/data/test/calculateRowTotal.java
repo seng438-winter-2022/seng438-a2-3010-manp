@@ -74,7 +74,7 @@ public class calculateRowTotal {
 	    });
 	    
 	    double result = DataUtilities.calculateRowTotal(values, 0);
-	   assertEquals("Adding 3 rows with negative values", -30.510005, result, .000000001d);
+	   assertEquals("Adding 3 rows with negative values", -30.500005, result, .000000001d);
 	}
 	
 	@Test
