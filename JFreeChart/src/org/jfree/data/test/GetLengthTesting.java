@@ -18,7 +18,7 @@ public void setUp() throws Exception
 	testR3 = new Range (-10, -5);
 	}
 
-/* Testing to see if expected value will be returned from getLenght() for given valid input */
+/* Testing to see if expected value will be returned from getLength() for given valid input */
 @Test
 public void testDifferentUpperAndLowerBoundsForMethodGetLength() {
 
