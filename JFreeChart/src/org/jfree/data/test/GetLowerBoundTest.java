@@ -15,7 +15,7 @@ public void setUp() throws Exception
 	testR = new Range(10.0, 30.0);
 	testR2 = new Range(-21.3, -20.0);
 	}
-/* Testing to see if correct positive lower boubd value is returned  */
+/* Testing to see if correct positive lower bound value is returned  */
 @Test
 public void testLowerBoundPositiveValueForMethodGetLowerBound() {
 	
