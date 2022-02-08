@@ -203,6 +203,7 @@ public class GetCumulativePercentages {
 
     @After
     public void tearDown() throws Exception {
+    	System.out.println("Tear Down");
     }
 
 }

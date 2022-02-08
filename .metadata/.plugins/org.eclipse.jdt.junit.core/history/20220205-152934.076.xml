@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="CreateNumberArray2DTest" project="JFreeChart" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="org.jfree.data.test.CreateNumberArray2DTest" time="0.002">
+    <testcase name="TestDoubleArrayForMethodCreateNumberArray2D" classname="org.jfree.data.test.CreateNumberArray2DTest" time="0.001"/>
+    <testcase name="TestEmptyDoubleArrayForMethodCreateNumberArray2D" classname="org.jfree.data.test.CreateNumberArray2DTest" time="0.0"/>
+    <testcase name="TestNullForMethodCreateNumberArray2D" classname="org.jfree.data.test.CreateNumberArray2DTest" time="0.0"/>
+  </testsuite>
+</testrun>
