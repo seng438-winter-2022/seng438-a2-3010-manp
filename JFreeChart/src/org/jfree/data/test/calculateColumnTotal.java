@@ -14,6 +14,9 @@ import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.jmock.Expectations;
 
+/*
+ * Testing Method CalculateColumnTtoal in the Data Utilities Class 
+*/
 public class calculateColumnTotal {
 	Mockery context;
 	
@@ -22,62 +25,45 @@ public class calculateColumnTotal {
     	context = new Mockery();
     }
     
+    /*
+     * Testing the exception thrown when null parameter is passed
+     */
     @Rule
     public ExpectedException thrown= ExpectedException.none();
     
     @Test
     public void passingNullAsParameter() {
-    	thrown.expect(InvalidParameterException.class);
+    	thrown.expect(IllegalArgumentException.class);
     	DataUtilities.calculateColumnTotal(null, 0);
     }
 	
+    /*
+     * Testing the boundary value of 32 bit signed int and adding another number to check for overflow
+     */
+    
 	@Test
-	public void positiveColumnValues() {
+	public void intBoundaryValues() {
 		final Values2D values = context.mock(Values2D.class);
 	    context.checking(new Expectations() {
 	        {
 	            one(values).getRowCount();
-	            will(returnValue(4));
+	            will(returnValue(3));
 	            one(values).getValue(0, 0);
-	            will(returnValue(7.5));
+	            will(returnValue(2147483647));
 	            one(values).getValue(1, 0);
-	            will(returnValue(2.500001));
+	            will(returnValue(100));
 	            one(values).getValue(2, 0);
-	            will(returnValue(0.05));
-	            one(values).getValue(3, 0);
-	            will(returnValue(10.00));
-	            one(values).getValue(1, 1);
-	            will(returnValue(100.00));
+	            will(returnValue(-2147483648));
 	        }
 	    });
 	    
 	    double result = DataUtilities.calculateColumnTotal(values, 0);
-	   assertEquals("Adding 4 rows with positive values", result, 20.050001, .000000001d);
+	   assertEquals("Adding 4 rows with 32 bit signed values", 99, result, .000000001d);
 	}
 	
-	@Test
-	public void negativeColumnValues() {
-		final Values2D values = context.mock(Values2D.class);
-	    context.checking(new Expectations() {
-	        {
-	            one(values).getRowCount();
-	            will(returnValue(4));
-	            one(values).getValue(0, 0);
-	            will(returnValue(-5.000005));
-	            one(values).getValue(1, 0);
-	            will(returnValue(-15.5));
-	            one(values).getValue(2, 0);
-	            will(returnValue(-0.01));
-	            one(values).getValue(3, 0);
-	            will(returnValue(-10.00));
-	            one(values).getValue(1, 1);
-	            will(returnValue(-90.50));
-	        }
-	    });
-	    
-	    double result = DataUtilities.calculateColumnTotal(values, 0);
-	   assertEquals("Adding 4 rows with negative values", result, -30.510005, .000000001d);
-	}
+	/*
+	 * Testing the column total for both positive and negative values
+	 */
 	
 	@Test
 	public void positiveNegativeColumnValues() {
@@ -103,6 +89,7 @@ public class calculateColumnTotal {
 	
     @After
     public void tearDown() throws Exception {
+    	context = null;
     }
 
 }
