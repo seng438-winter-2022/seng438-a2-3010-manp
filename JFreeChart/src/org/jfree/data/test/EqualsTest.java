@@ -5,6 +5,7 @@ import org.junit.*;
 import org.jfree.data.Range;
 import org.junit.Test;
 
+/* Testing Equals method in Range class */
 public class EqualsTest{
 	
 	private Range testR;
