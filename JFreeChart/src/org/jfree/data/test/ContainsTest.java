@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.*;
 import org.jfree.data.Range;
 
+/* Testing Contains method in Range class  */
 public class ContainsTest {
 private Range testR;
 
