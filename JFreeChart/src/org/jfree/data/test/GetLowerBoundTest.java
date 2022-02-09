@@ -5,10 +5,11 @@ import static org.junit.Assert.*;
 import org.junit.*;
 import org.jfree.data.Range;
 
+/* Testing GetLowerBound methods in Range class */
 public class GetLowerBoundTest {
 private Range testR;
 private Range testR2;
-/* Two Ranges are defined below (10.0-30.0 and -21.3--20.0) for testing purpose */
+/* Two Ranges are defined below (10.0 to 30.0 and -21.3 to -20.0) for testing purpose */
 @Before
 public void setUp() throws Exception
 	{
