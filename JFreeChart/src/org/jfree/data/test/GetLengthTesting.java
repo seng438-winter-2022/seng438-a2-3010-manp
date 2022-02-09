@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.*;
 import org.jfree.data.Range;
 
+/* Testing GetLength methods in Range class*/
 public class GetLengthTesting {
 private Range testR;
 private Range testR2;
