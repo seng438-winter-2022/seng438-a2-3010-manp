@@ -11,7 +11,7 @@
 
 # 1 Introduction
 
-In this lab, our goal was to test the 5 methods in the Range class and 5 methods in the Data Utilities class. It is a black box testing for both classes since we don’t know the actual code implementation. In order to perform a comprehensive testing for these methods, we followed the equivalence class technique and boundary value analysis technique. The test method we chose for the Range class is Equals, toString, Contains, GetLengthTesting and GetLowerBoundTest.The ones we chose for DataUtilities class is GetCumulativePercentages, createNumberArray2D, createNumberArray, calculateColumnTotal and calculateRowTotal. 
+In this lab, our goal was to test the 5 methods in the Range class and 5 methods in the Data Utilities class. It is a black box testing for both classes since we don’t know the actual code implementation. In order to perform a comprehensive testing for these methods, we followed the equivalence class technique and boundary value analysis technique. The test method we chose for the Range class is Equals, toString, Contains, GetLength and GetLowerBound.The ones we chose for DataUtilities class is GetCumulativePercentages, createNumberArray2D, createNumberArray, calculateColumnTotal and calculateRowTotal. 
 
 # 2 Detailed description of unit test strategy
 In this lab, We followed Equivalence class testing and Boundary testing for the 5 methods of the Range Class as well as for the Data Utilities Class.
