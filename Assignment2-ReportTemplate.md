@@ -2,12 +2,12 @@
 
 **Lab. Report \#2 – Requirements-Based Test Generation**
 
-| Group \#:      |     |
+| Group \#: 23   |     |
 | -------------- | --- |
-| Student Names: |     |
-|                |     |
-|                |     |
-|                |     |
+| Tianfan Zhou   |     |
+| Manpreet Singh |     |
+|Muhammad Shakeel|     |
+|Girimer Singh   |     |
 
 # 1 Introduction
 
