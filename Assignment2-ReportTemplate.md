@@ -56,9 +56,9 @@ All the test methods that were developed with respect to their equivalence class
 
 # <Class:Range, Method:Equals>
 
-1.testingSameRangeObject(): (Equivalent class with same range object)
+1.testingSameRangeObject(): (Equivalent class with same range objects)
 
-2.testingDifferentRangeObject():  (Equivalent class with different range)
+2.testingDifferentRangeObject():  (Equivalent class with different range objects)
 
 3.testingStringObject(): (Equivalent class with different class object) 
 
