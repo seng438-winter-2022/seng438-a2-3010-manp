@@ -5,6 +5,13 @@ import org.junit.*;
 import org.jfree.data.Range;
 import org.junit.Test;
 
+/*
+ * public boolean equals(java.lang.Object obj): Tests this object for equality with an arbitrary object.
+ * Overrides: equals in class java.lang.Object
+ * Parameters: obj - the object to test against (null permitted).
+ * Returns: true if the input object is an equivalent range.
+ */
+
 /* Testing Equals method in Range class */
 public class EqualsTest{
 	
@@ -50,6 +57,13 @@ public class EqualsTest{
 	public void testingSameUpperBoundRangeObject() {
 		Range test = new Range(0, 20);
 		assertEquals("Testing a Different Range Object with same upper bound",false, testR.equals(test));
+	}
+	
+	/* Testing to see if the input Range has close lower and upper bound */
+	@Test
+	public void testingCloseRangeObject() {
+		Range test = new Range(9.99999999999999999, 20.00000000000000000001);
+		assertEquals("Testing close Range Object",false, testR.equals(test));
 	}
 	
 	@After

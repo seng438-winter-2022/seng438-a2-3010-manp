@@ -4,6 +4,13 @@ import static org.junit.Assert.*;
 import org.jfree.data.Range;
 import org.junit.*;
 
+/*
+ * Reference:
+ * public java.lang.String toString(): Returns a string representation of this Range.
+ * Overrides: toString in class java.lang.Object
+ * Returns: A String "Range[lower,upper]" where lower=lower range and upper=upper range.
+ */
+
 //to test ToString method within Range class
 public class ToStringTest {
 	private Range test1;
@@ -60,6 +67,7 @@ public class ToStringTest {
     	test1 = null;
     	test2 = null;
     	test3 = null;
+    	test4 = null;
     }
     
 }

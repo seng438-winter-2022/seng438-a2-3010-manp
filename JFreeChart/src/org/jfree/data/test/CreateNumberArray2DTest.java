@@ -5,6 +5,14 @@ import org.jfree.data.DataUtilities;
 import org.junit.*;
 
 /*
+ * public static java.lang.Number[][] createNumberArray2D(double[][] data):
+ * Constructs an array of arrays of Number objects from a corresponding structure containing double primitives.
+ * Parameters: data - An array of double primitives (null not permitted).
+ * Returns: An array of Number objects.
+ * Throws: InvalidParameterException - if invalid data object is passed in.
+ */
+
+/*
  * To test the Method CreateNumberArray2D in the Data Utilities Class 
   */
 public class CreateNumberArray2DTest {
@@ -13,10 +21,16 @@ public class CreateNumberArray2DTest {
 	private double[][] arrDouble2 = {{1.0,2.0,3.0},
 									{4.0,5.0,6.0},
 									{7.0,8.0,9.0}};
+	private double[][] arrDouble3 = {{-1.0,-2.0,-3.0},
+									{-4.0,-5.0,-6.0},
+									{-7.0,-8.0,-9.0}};
 	private Number[][] arrNumber1 = {};
 	private Number[][] arrNumber2 = {{1.0,2.0,3.0},
 									{4.0,5.0,6.0},
 									{7.0,8.0,9.0}};
+	private Number[][] arrNumber3 = {{-1.0,-2.0,-3.0},
+									{-4.0,-5.0,-6.0},
+									{-7.0,-8.0,-9.0}};
 	
 	  @Before
 	    public void setUp() throws Exception {
@@ -57,6 +71,18 @@ public class CreateNumberArray2DTest {
 	 {
 		assertArrayEquals("The Number 2D array and the Double 2D array are not equivalent", arrNumber2, DataUtilities.createNumberArray2D(arrDouble2));
 	 }
+	 
+	 /*
+	  * This test checks when the double 2D Array with negative value passed to the testing method, it should 
+	  * produce an equivalent Number 2D array with equal length.
+	  * */
+	 
+	 @Test
+	 public void TestNegativeDoubleArrayForMethodCreateNumberArray2D()
+	 {
+		assertArrayEquals("The Number 2D array and the Double 2D array are not equivalent", arrNumber3, DataUtilities.createNumberArray2D(arrDouble3));
+	 }
+	 
 	 
 	 @After  
 	 public void tearDown() throws Exception {

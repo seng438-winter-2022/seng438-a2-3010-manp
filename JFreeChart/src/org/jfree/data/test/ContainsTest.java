@@ -5,6 +5,13 @@ import static org.junit.Assert.*;
 import org.junit.*;
 import org.jfree.data.Range;
 
+/*
+ * public boolean contains(double value): 
+ * Returns true if the specified value is within the range and false otherwise.
+ * Parameters: value - the value to be tested
+ * Returns: true if the range contains the specified value.
+ */
+
 /* Testing Contains method in Range class  */
 public class ContainsTest {
 private Range testR;
@@ -46,6 +53,20 @@ public void testLowerBoundRangeValueForMethodContains() {
 public void testUpperBoundRangeValueForMethodContains() {
 
 	assertEquals("The upper bound value lies in Range.", true, testR.contains(30.0));
+}
+
+/* Testing to see when the input near the lower bound */
+@Test
+public void testLowerBoundRangeValueWithCloserValueForMethodContains() {
+
+	assertEquals("The lower bound value close but out of Range.", false, testR.contains(9.9999999999999999999999));
+}
+
+/* Testing to see when the input near the upper bound */
+@Test
+public void testUpperBoundRangeValueWithCloserValueForMethodContains() {
+
+	assertEquals("The upper bound value close but out of Range.", false, testR.contains(30.000000000000000000001));
 }
 
 @After
