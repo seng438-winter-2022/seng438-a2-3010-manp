@@ -42,7 +42,7 @@ public class calculateRowTotal {
      * Testing the boundary value of 32 bit signed int and adding another number to check for overflow
      */
 	@Test
-	public void positiveRowValues() {
+	public void intBoundaryValues() {
 		final Values2D values = context.mock(Values2D.class);
 	    context.checking(new Expectations() {
 	        {
