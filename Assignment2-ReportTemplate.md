@@ -157,7 +157,7 @@ Returns: true if the range contains the specified value.
 
 4.testLargeRangeForMethodGetLength(): (Equivalence class with large negative lower limit and large positive upper limits)
 
-5.testSmallRangeForMethodGetLength(): : (Equivalence class with small difference between upper and lower limit)
+5.testSmallRangeForMethodGetLength(): (Equivalence class with small difference between upper and lower limit)
 
 
 # Result
@@ -218,14 +218,14 @@ Returns:The lower bound.
 7.TestNullForMethodGetCumulativePercentages(): (Boundary condition with a null input)
 
 
-# Result:-
+# Result
 
-Passed test: 1, 4,5,7
+Passed test: 1,4,5,7
 
 Unpassed test: 2,3,6
 
 
-# Reference:-
+# Reference
 
 public static KeyedValues getCumulativePercentages(KeyedValues data): Returns a KeyedValues instance that contains the cumulative percentage values for the data in another 
 
@@ -250,14 +250,14 @@ Throws: InvalidParameterException - if invalid data object is passed in.
 
 
 
-# Result:-
+# Result
 
 Passed test: 1, 2, 3, 4
 
 Unpassed test: N/A
 
 
-# Reference:-
+# Reference
 
 public static java.lang.Number[][] createNumberArray2D(double[][] data)
 
@@ -282,14 +282,14 @@ Throws: InvalidParameterException - if invalid data object is passed in.
 
 
 
-# Result:-
+# Result
 
 Passed test: 1, 2, 3, 4
 
 Unpassed test: N/A
 
 
-# Reference:-
+# Reference
 
 public static java.lang.Number[] createNumberArray(double[] data)
 
@@ -318,14 +318,14 @@ Throws:InvalidParameterException - if invalid data object is passed in.
 6.NullColumnValueTest(): (Equivalence class with null values in the column)
 
 
-# Result:-
+# Result
 
 Passed test: 1, 2, 3, 4, 5, 6
 
 Unpassed test: N/A
 
 
-# Reference:-
+# Reference
 
 public static double calculateColumnTotal(Values2D data, int column)
 
@@ -351,19 +351,19 @@ Throws: InvalidParameterException - if invalid data object is passed in.
 
 4.invalidFirstInputTest(): (Equivalence class with invalid input)
 
-5.invalidSecondInputTest(): : (Equivalence class with invalid input)
+5.invalidSecondInputTest(): (Equivalence class with invalid input)
 
 6.NullRowValueTest(): (Equivalence class with null values in the row)
 
 
-# Result:-
+# Result
 
 Passed test: 1, 2, 3, 4, 5, 6
 
 Unpassed test: N/A
 
 
-# Reference:-
+# Reference
 
 public static double calculateRowTotal(Values2D data, int row)
 
