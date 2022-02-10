@@ -18,35 +18,35 @@ In this lab, We followed Equivalence class testing and Boundary testing for the 
 
 The detailed description of each method of Range and Data Utilities class is discribed as follows:
 
-<Class:Range, Method:Equals>
+# <Class:Range, Method:Equals>
 For testing of the equals method, we used an equivalence class technique to divide input into different intervals, which are non Range object and Range object. And within the Range object, we divided it into input with equal, or different range compared to the target object. And we have boundary testing in which the input is divided into the same lower bound, same upper bound and very close values of upper and lower bound in the range object and then compares all these input Range objects with the target object.
 
-<Class:Range, Method:toString>
+# <Class:Range, Method:toString>
 To test the toString method, an equivalence class method is used to divide input into different classes, which is Integer Range (positive range, negative range), and decimal range. A boundary test is used to test for range lower bound equals upper bound. And when an uninitialized object is passed as an input. The passing criteria is based on using an assertEqual method to see if actual output String matches with the expected String for test method 1,2,3,4. For test method 5, we use an assertTrue function to see if there is an exception thrown out with a null input.
 
-<Class:Range, Method:Contains>
+# <Class:Range, Method:Contains>
 To test this method, equivalence class testing and boundary testing was used. Using Equivalence class, the inputs were divided into value in range, value outside of lower and upper range. The boundary testing was performed with inputs as the same lower bound of range value value, same upper bound value, close value to upper bound and close value to the lower bound of range. The assertEquals was used to test the passing criteria based on whether the input value lies within the range object or outside the range.
 
-<Class:Range, Method:GetLength>
+# <Class:Range, Method:GetLength>
 In order to test the GetLength method in the range class, We used equivalence class technique and divided the input into different range objects and those were positive range object, negative range object, range object with same upper and lower value, range object with large upper and large negative lower value and finally range object with smaller difference between upper and lower value . Using these different range objects, the expected length value was compared with their respective range object using assertEquals test passing criteria.
 
-<Class:Range, Method:GetLowerBound>
+# <Class:Range, Method:GetLowerBound>
 In order to test the GetLowerBound method in the range class, We used boundary testing technique to test lower bounds of the Range objects with the equivalent targeted object.
 The different inputs that were tested in this testing were positive limits range object, negative limits range object and range object with very large decimal lower limit. The expected lower limit was compared with their respective actual output obtained from the input range object using assertEquals test passing criteria.
 
-<Class:DataUtilities, Method:getCumulativePercentages>
+# <Class:DataUtilities, Method:getCumulativePercentages>
 To test GetCumulativePercentages method, an equivalence class technology is used to divide input into different classes: KeyedValues object with negative keys and values, KeyedValues object with positive keys and values, KeyedValues object with decimal keys and values, KeyedValues object with string keys and values, KeyedValues object with keys and null values. Also, a boundary analysis is used to test an input with an uninitialized object and null object. A mock object is used to replace the actual KeyedValues object in this testing. For the pass/fail criteria, we define a test case passed if the actual object equals the expected object we made (for methods 2,3,4). And for method 1, if the method throws out an exception as expected.
 
-<Class:DataUtilities, Method:createNumberArray2D>
+# <Class:DataUtilities, Method:createNumberArray2D>
 The testing of the CreateNumber2DArray method was performed using the equivalence class technique. Using this technique, the input was divided into a null, empty double 2d array, a 2D double array with positive values and a 2D double array with negative values. The test was performed and the expected Number 2D array was compared with the returned Number 2D array from this method using assertArrayEquals test passing criteria.
 
-<Class:DataUtilities, Method:createNumberArray>
+# <Class:DataUtilities, Method:createNumberArray>
 Method was tested by dividing input into four equivalent classes. Through each equivalent class, values tested are positive, negative, empty array and null input. All the outputs were compared to the equivalent expected Number array using assertArrayEquals test passing criteria.
 
-<Class:DataUtilities, Method:calculateColumnTotal>
+# <Class:DataUtilities, Method:calculateColumnTotal>
 To test the method inputs were divided into four equivalence classes, one for valid positive and negative values, one for null input, one for null values in the entire column and one for the invalid inputs. To check the boundary condition, a test was performed with the largest 32 bit signed int value and adding another number to check for overflow. All these Equivalence classes and boundary cases were tested based on assertEquals testing passing criteria.
 
-<Class:DataUtilities, Method:calculateRowTotal>
+# <Class:DataUtilities, Method:calculateRowTotal>
 Testing for this method was done using equivalence classes and boundary conditions. Input was divided based on valid positive and negative values, null input, null values in the entire column and invalid inputs passed as a parameter. To check the boundary condition 32 bit signed int value was passed as input along with more numbers to add. All these Equivalence classes and boundary cases were tested based on assertEquals testing passing criteria.
 
 
@@ -54,7 +54,7 @@ Testing for this method was done using equivalence classes and boundary conditio
 
 All the test Methods that were developed with respect to their equivalence class for the methods of the Range class and Data Utilities Class are as follows.
 
-<Class:Range, Method:Equals>
+# <Class:Range, Method:Equals>
 
 1.testingSameRangeObject(): (Equivalent class with same range object)
 
@@ -69,14 +69,14 @@ All the test Methods that were developed with respect to their equivalence class
 6.testingCloseRangeObject(): (Boundary test with very closer values to lower and upper bound respectively)
 
 
-Result:
+# Result:
 
 Passed test: 1, 2, 3, 4, 5
 
 Unpassed test: 6
 
 
-Reference: 
+# Reference: 
 
 public boolean equals(java.lang.Object obj): Tests this object for equality with an arbitrary object.
 
@@ -88,7 +88,7 @@ Returns: true if the input object is an equivalent range.
 
 
 
-<Class:Range, Method:toString>
+# <Class:Range, Method:toString>
 
 1.testPositiveForMethodToString(): (Equivalence class for all Range input with positive bounds)
 
@@ -101,14 +101,14 @@ Returns: true if the input object is an equivalent range.
 5.testNullForMethodToString(): (Equivalence class for uninitialized Range input) 
 
 
-Result:-
+# # Result:-
 
 Passed test: 1, 2, 3, 4, 5
 
 Unpassed test: N/A
 
 
-Reference
+# Reference
 public java.lang.String toString(): Returns a string representation of this Range.
 
 Overrides: toString in class java.lang.Object
@@ -116,7 +116,7 @@ Overrides: toString in class java.lang.Object
 Returns: A String "Range[lower,upper]" where lower=lower range and upper=upper range.
 
 
-<Class:Range, Method:Contains>
+# <Class:Range, Method:Contains>
 1.testValueInRangeForMethodContains(): (Equivalence class with value lies in range)
 
 2.testValueLessThanLowerBoundForMethodContains(): (Equivalence class with value lies outside the lower limit of range)
@@ -132,14 +132,14 @@ Returns: A String "Range[lower,upper]" where lower=lower range and upper=upper r
 7.testUpperBoundRangeValueWithCloserValueForMethodContains(): (Equivalence class with value closer to upper limit of range)
 
 
-Result:-
+# Result:-
 
 Passed test: 1, 2, 3, 4, 5
 
 Unpassed test: 6, 7
 
 
-Reference:-
+# Reference:-
 public boolean contains(double value): Returns true if the specified value is within the range and false otherwise.
 
 Parameters: value - the value to be tested
@@ -147,7 +147,7 @@ Parameters: value - the value to be tested
 Returns: true if the range contains the specified value.
 
 
-<Class:Range, Method:GetLength>
+# <Class:Range, Method:GetLength>
 
 1.testDifferentUpperAndLowerBoundsForMethodGetLength(): (Equivalence class with different limits)
 
@@ -160,14 +160,14 @@ Returns: true if the range contains the specified value.
 5.testSmallRangeForMethodGetLength(): : (Equivalence class with small difference between upper and lower limit)
 
 
-Result:-
+# Result:-
 
 Passed test: 1, 2, 3, 4, 5
 
 Unpassed test: N/A
 
 
-Reference: -
+# Reference: -
 public double getLength()
 
 Returns the length of the range.
@@ -176,7 +176,7 @@ Returns:The length.
 
 
 
-<Class:Range, Method:GetLowerBound>
+# <Class:Range, Method:GetLowerBound>
 
 1.testLowerBoundPositiveValueForMethodGetLowerBound(): (Boundary testing with positive lower bound vale)
 
@@ -185,14 +185,14 @@ Returns:The length.
 3.testLongDecimalLowerBoundValueForMethodGetLowerBound(): (Boundary testing with very large decimal lower bound value)
 
 
-Result:-
+# Result:-
 
 Passed test: 1, 2, 3
 
 Unpassed test: N/A
 
 
-Reference: -
+# Reference: -
 
 public double getLowerBound()
 
@@ -201,7 +201,7 @@ Returns the lower bound for the range.
 Returns:The lower bound.
 
 
-<Class:DataUtilities, Method:getCumulativePercentages>
+# <Class:DataUtilities, Method:getCumulativePercentages>
 
 1.TestExceptionForMethodGetCumulativePercentages(): (Boundary condition with a null input)
 
@@ -218,14 +218,14 @@ Returns:The lower bound.
 7.TestNullForMethodGetCumulativePercentages (Boundary condition with a null input)
 
 
-Result:-
+# Result:-
 
 Passed test: 1, 4,5,7
 
 Unpassed test: 2,3,6
 
 
-Reference:-
+# Reference:-
 
 public static KeyedValues getCumulativePercentages(KeyedValues data): Returns a KeyedValues instance that contains the cumulative percentage values for the data in another 
 
@@ -239,7 +239,7 @@ Throws: InvalidParameterException - if invalid data object is passed in.
 
 
 
-<Class:DataUtilities, Method:createNumberArray2D>
+# <Class:DataUtilities, Method:createNumberArray2D>
 1.TestNullForMethodCreateNumberArray2D(): (Equivalence class with null parameter)
 
 2.TestEmptyDoubleArrayForMethodCreateNumberArray2D(): (Equivalence class with an empty array)
@@ -250,14 +250,14 @@ Throws: InvalidParameterException - if invalid data object is passed in.
 
 
 
-Result:-
+# Result:-
 
 Passed test: 1, 2, 3, 4
 
 Unpassed test: N/A
 
 
-Reference:-
+# Reference:-
 
 public static java.lang.Number[][] createNumberArray2D(double[][] data)
 
@@ -270,7 +270,7 @@ Returns: An array of Number objects.
 Throws: InvalidParameterException - if invalid data object is passed in.
 
 
-<Class:DataUtilities, Method:createNumberArray>
+# <Class:DataUtilities, Method:createNumberArray>
 
 1.TestNullForMethodCreateNumberArray2D(): (Equivalence class as passing null as parameter to check for InvalidParameterException)
 
@@ -282,14 +282,14 @@ Throws: InvalidParameterException - if invalid data object is passed in.
 
 
 
-Result:-
+# Result:-
 
 Passed test: 1, 2, 3, 4
 
 Unpassed test: N/A
 
 
-Reference:-
+# Reference:-
 
 public static java.lang.Number[] createNumberArray(double[] data)
 
@@ -303,7 +303,7 @@ Throws:InvalidParameterException - if invalid data object is passed in.
 
 
 
-<Class:DataUtilities, Method:calculateColumnTotal>
+# <Class:DataUtilities, Method:calculateColumnTotal>
 
 1.passingNullAsParameter(): (Equivalence class to get invalidParameterException)
 
@@ -318,14 +318,14 @@ Throws:InvalidParameterException - if invalid data object is passed in.
 6.NullColumnValueTest(): (Equivalence class with null values in the column)
 
 
-Result:-
+# Result:-
 
 Passed test: 1, 2, 3, 4, 5, 6
 
 Unpassed test: N/A
 
 
-Reference:-
+# Reference:-
 
 public static double calculateColumnTotal(Values2D data, int column)
 
@@ -340,7 +340,7 @@ Throws: InvalidParameterException - if invalid data object is passed in.
 
 
 
-<Class:DataUtilities, Method:calculateRowTotal>
+# <Class:DataUtilities, Method:calculateRowTotal>
 
 1.passingNullAsParameter(): (Equivalence class to get invalidParameterException)
 
@@ -356,14 +356,14 @@ Throws: InvalidParameterException - if invalid data object is passed in.
 6.NullRowValueTest(): (Equivalence class with null values in the row)
 
 
-Result:-
+# Result:-
 
 Passed test: 1, 2, 3, 4, 5, 6
 
 Unpassed test: N/A
 
 
-Reference:-
+# Reference:-
 
 public static double calculateRowTotal(Values2D data, int row)
 
