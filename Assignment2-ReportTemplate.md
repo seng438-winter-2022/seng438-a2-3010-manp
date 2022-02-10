@@ -64,7 +64,7 @@ All the test methods that were developed with respect to their equivalence class
 
 4.testingSamelowerBoundOfRangeObject(): (Boundary test with same lower boundary of range object)
 
-5.testingSameUpeerBoundRangeObject(): (Boundary test with same upper boundary of range object)
+5.testingSameUpperBoundRangeObject(): (Boundary test with same upper boundary of range object)
 
 6.testingCloseRangeObject(): (Boundary test with very closer values to lower and upper bound respectively)
 
