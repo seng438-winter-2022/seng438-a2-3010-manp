@@ -18,35 +18,35 @@ In this lab, We followed Equivalence class testing and Boundary testing for the 
 
 The detailed description of each method of Range and Data Utilities class is discribed as follows:
 
-# <Class:Range, Method:Equals>
+<Class:Range, Method:Equals>
 For testing of the equals method, we used an equivalence class technique to divide input into different intervals, which are non Range object and Range object. And within the Range object, we divided it into input with equal, or different range compared to the target object. And we have boundary testing in which the input is divided into the same lower bound, same upper bound and very close values of upper and lower bound in the range object and then compares all these input Range objects with the target object.
 
-# <Class:Range, Method:toString>
+<Class:Range, Method:toString>
 To test the toString method, an equivalence class method is used to divide input into different classes, which is Integer Range (positive range, negative range), and decimal range. A boundary test is used to test for range lower bound equals upper bound. And when an uninitialized object is passed as an input. The passing criteria is based on using an assertEqual method to see if actual output String matches with the expected String for test method 1,2,3,4. For test method 5, we use an assertTrue function to see if there is an exception thrown out with a null input.
 
-# <Class:Range, Method:Contains>
+<Class:Range, Method:Contains>
 To test this method, equivalence class testing and boundary testing was used. Using Equivalence class, the inputs were divided into value in range, value outside of lower and upper range. The boundary testing was performed with inputs as the same lower bound of range value value, same upper bound value, close value to upper bound and close value to the lower bound of range. The assertEquals was used to test the passing criteria based on whether the input value lies within the range object or outside the range.
 
-# <Class:Range, Method:GetLength>
+<Class:Range, Method:GetLength>
 In order to test the GetLength method in the range class, We used equivalence class technique and divided the input into different range objects and those were positive range object, negative range object, range object with same upper and lower value, range object with large upper and large negative lower value and finally range object with smaller difference between upper and lower value . Using these different range objects, the expected length value was compared with their respective range object using assertEquals test passing criteria.
 
-# <Class:Range, Method:GetLowerBound>
+<Class:Range, Method:GetLowerBound>
 In order to test the GetLowerBound method in the range class, We used boundary testing technique to test lower bounds of the Range objects with the equivalent targeted object.
 The different inputs that were tested in this testing were positive limits range object, negative limits range object and range object with very large decimal lower limit. The expected lower limit was compared with their respective actual output obtained from the input range object using assertEquals test passing criteria.
 
-# <Class:DataUtilities, Method:getCumulativePercentages>
+<Class:DataUtilities, Method:getCumulativePercentages>
 To test GetCumulativePercentages method, an equivalence class technology is used to divide input into different classes: KeyedValues object with negative keys and values, KeyedValues object with positive keys and values, KeyedValues object with decimal keys and values, KeyedValues object with string keys and values, KeyedValues object with keys and null values. Also, a boundary analysis is used to test an input with an uninitialized object and null object. A mock object is used to replace the actual KeyedValues object in this testing. For the pass/fail criteria, we define a test case passed if the actual object equals the expected object we made (for methods 2,3,4). And for method 1, if the method throws out an exception as expected.
 
-# <Class:DataUtilities, Method:createNumberArray2D>
+<Class:DataUtilities, Method:createNumberArray2D>
 The testing of the CreateNumber2DArray method was performed using the equivalence class technique. Using this technique, the input was divided into a null, empty double 2d array, a 2D double array with positive values and a 2D double array with negative values. The test was performed and the expected Number 2D array was compared with the returned Number 2D array from this method using assertArrayEquals test passing criteria.
 
-# <Class:DataUtilities, Method:createNumberArray>
+<Class:DataUtilities, Method:createNumberArray>
 Method was tested by dividing input into four equivalent classes. Through each equivalent class, values tested are positive, negative, empty array and null input. All the outputs were compared to the equivalent expected Number array using assertArrayEquals test passing criteria.
 
-# <Class:DataUtilities, Method:calculateColumnTotal>
+<Class:DataUtilities, Method:calculateColumnTotal>
 To test the method inputs were divided into four equivalence classes, one for valid positive and negative values, one for null input, one for null values in the entire column and one for the invalid inputs. To check the boundary condition, a test was performed with the largest 32 bit signed int value and adding another number to check for overflow. All these Equivalence classes and boundary cases were tested based on assertEquals testing passing criteria.
 
-# <Class:DataUtilities, Method:calculateRowTotal>
+<Class:DataUtilities, Method:calculateRowTotal>
 Testing for this method was done using equivalence classes and boundary conditions. Input was divided based on valid positive and negative values, null input, null values in the entire column and invalid inputs passed as a parameter. To check the boundary condition 32 bit signed int value was passed as input along with more numbers to add. All these Equivalence classes and boundary cases were tested based on assertEquals testing passing criteria.
 
 
