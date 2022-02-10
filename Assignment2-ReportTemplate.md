@@ -395,5 +395,5 @@ One other difficulty we encountered was that the hamcrest-library jar file was m
 
 
 # 6 Comments/feedback on the lab itself
+The lab document contained a lot of detailed information about the required setup needed (eclipse and junit 4). Moreover, the lab document outlined every step to get eclipse and junit 4 to work. This was helpful as we were able to use the RangeTest to confirm that we had the required jar files to start writing the test cases. Moreover, In this lab, we have applied our knowledge of equivalence class testing and boundary testing which learnt from lecture into practice. It is a meaningful lab in which we have spent time to figure out as many possibilities as we can, to divide possible input values into different equivalent classes in order to make a comprehensive testing. In our testing result, we have actually found some bugs in some of the boundary testing. From this lab, we learnt the importance of using equivalence class and boundary testing technologies for black box testing.
 
-Text…
