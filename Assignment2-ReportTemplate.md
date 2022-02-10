@@ -44,7 +44,7 @@ The testing of the CreateNumber2DArray method was performed using the equivalenc
 Method was tested by dividing input into four equivalent classes. Through each equivalent class, values tested are positive, negative, empty array and null input. All the outputs were compared to the equivalent expected Number array using assertArrayEquals test passing criteria.
 
 <Class:DataUtilities, Method:calculateColumnTotal>
-To test the method inputs were divided into four equivalence classes, one for valid positive and negative values, one for null input, one for null values in the entire column and one for the invalid inputs. To check the boundary condition, a test was performed with the largest 32 bit signed int value and adding another number to check for overflow. All these Equivalence classes and boundary cases were tested based on assertEquals testing passing criteria.
+To test the method, inputs were divided into four equivalence classes, one for valid positive and negative values, one for null input, one for null values in the entire column and one for the invalid inputs. To check the boundary condition, a test was performed with the largest 32 bit signed int value and adding another number to check for overflow. All these Equivalence classes and boundary cases were tested based on assertEquals testing passing criteria.
 
 <Class:DataUtilities, Method:calculateRowTotal>
 Testing for this method was done using equivalence classes and boundary conditions. Input was divided based on valid positive and negative values, null input, null values in the entire column and invalid inputs passed as a parameter. To check the boundary condition 32 bit signed int value was passed as input along with more numbers to add. All these Equivalence classes and boundary cases were tested based on assertEquals testing passing criteria.
@@ -69,14 +69,14 @@ All the test Methods that were developed with respect to their equivalence class
 6.testingCloseRangeObject(): (Boundary test with very closer values to lower and upper bound respectively)
 
 
-# Result:
+# Result
 
 Passed test: 1, 2, 3, 4, 5
 
 Unpassed test: 6
 
 
-# Reference: 
+# Reference 
 
 public boolean equals(java.lang.Object obj): Tests this object for equality with an arbitrary object.
 
@@ -101,7 +101,7 @@ Returns: true if the input object is an equivalent range.
 5.testNullForMethodToString(): (Equivalence class for uninitialized Range input) 
 
 
-# # Result:-
+# # Result
 
 Passed test: 1, 2, 3, 4, 5
 
@@ -132,14 +132,14 @@ Returns: A String "Range[lower,upper]" where lower=lower range and upper=upper r
 7.testUpperBoundRangeValueWithCloserValueForMethodContains(): (Equivalence class with value closer to upper limit of range)
 
 
-# Result:-
+# Result
 
 Passed test: 1, 2, 3, 4, 5
 
 Unpassed test: 6, 7
 
 
-# Reference:-
+# Reference
 public boolean contains(double value): Returns true if the specified value is within the range and false otherwise.
 
 Parameters: value - the value to be tested
@@ -160,14 +160,14 @@ Returns: true if the range contains the specified value.
 5.testSmallRangeForMethodGetLength(): : (Equivalence class with small difference between upper and lower limit)
 
 
-# Result:-
+# Result
 
 Passed test: 1, 2, 3, 4, 5
 
 Unpassed test: N/A
 
 
-# Reference: -
+# Reference
 public double getLength()
 
 Returns the length of the range.
@@ -185,14 +185,14 @@ Returns:The length.
 3.testLongDecimalLowerBoundValueForMethodGetLowerBound(): (Boundary testing with very large decimal lower bound value)
 
 
-# Result:-
+# Result
 
 Passed test: 1, 2, 3
 
 Unpassed test: N/A
 
 
-# Reference: -
+# Reference
 
 public double getLowerBound()
 
@@ -272,13 +272,13 @@ Throws: InvalidParameterException - if invalid data object is passed in.
 
 # <Class:DataUtilities, Method:createNumberArray>
 
-1.TestNullForMethodCreateNumberArray2D(): (Equivalence class as passing null as parameter to check for InvalidParameterException)
+1.passingNullAsParameter(): (Equivalence class as passing null as parameter to check for InvalidParameterException)
 
-2.TestEmptyDoubleArrayForMethodCreateNumberArray2D(): (Equivalence class with an empty array)
+2.CreatingNumberArrayFromEmptyArray(): (Equivalence class with an empty array)
 
-3.TestDoubleArrayForMethodCreateNumberArray2D(): (Equivalence class with a positive double array to create a Number array of positive values)
+3.CreatingNumberArrayPositiveValues(): (Equivalence class with a positive double array to create a Number array of positive values)
 
-4.TestNegativeDoubleArrayForMethodCreateNumberArray2D(): (Equivalence class with a negative double array to create a Number array of negative values)
+4.CreatingNumberArrayNegativeValues(): (Equivalence class with a negative double array to create a Number array of negative values)
 
 
 
