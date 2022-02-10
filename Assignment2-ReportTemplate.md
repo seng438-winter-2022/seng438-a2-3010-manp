@@ -178,9 +178,9 @@ Returns:The length.
 
 # <Class:Range, Method:GetLowerBound>
 
-1.testLowerBoundPositiveValueForMethodGetLowerBound(): (Boundary testing with positive lower bound vale)
+1.testLowerBoundPositiveValueForMethodGetLowerBound(): (Boundary testing with positive lower bound value)
 
-2.testLowerBoundNegativeValueForMethodGetLowerBound(): (Boundary testing with negative lower bound vale)
+2.testLowerBoundNegativeValueForMethodGetLowerBound(): (Boundary testing with negative lower bound value)
 
 3.testLongDecimalLowerBoundValueForMethodGetLowerBound(): (Boundary testing with very large decimal lower bound value)
 
