@@ -47,7 +47,7 @@ Method was tested by dividing input into four equivalent classes. Through each e
 To test the method, inputs were divided into four equivalence classes, one for valid positive and negative values, one for null input, one for null values in the entire column and one for the invalid inputs. To check the boundary condition, a test was performed with the largest 32 bit signed int value and adding another number to check for overflow. All these Equivalence classes and boundary cases were tested based on assertEquals testing passing criteria.
 
 <Class:DataUtilities, Method:calculateRowTotal>
-Testing for this method was done using equivalence classes and boundary conditions. Input was divided based on valid positive and negative values, null input, null values in the entire column and invalid inputs passed as a parameter. To check the boundary condition 32 bit signed int value was passed as input along with more numbers to add. All these Equivalence classes and boundary cases were tested based on assertEquals testing passing criteria.
+Testing for this method was done using equivalence classes and boundary conditions. Input was divided based on valid positive and negative values, null input, null values in the entire row and invalid inputs passed as a parameter. To check the boundary condition 32 bit signed int value was passed as input along with more numbers to add. All these Equivalence classes and boundary cases were tested based on assertEquals testing passing criteria.
 
 
 # 3 Test cases developed
