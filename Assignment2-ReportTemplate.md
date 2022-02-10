@@ -101,7 +101,7 @@ Returns: true if the input object is an equivalent range.
 5.testNullForMethodToString(): (Equivalence class for uninitialized Range input) 
 
 
-# # Result
+#  Result
 
 Passed test: 1, 2, 3, 4, 5
 
