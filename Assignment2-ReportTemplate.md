@@ -52,7 +52,7 @@ Testing for this method was done using equivalence classes and boundary conditio
 
 # 3 Test cases developed
 
-All the test Methods that were developed with respect to their equivalence class for the methods of the Range class and Data Utilities Class are as follows.
+All the test methods that were developed with respect to their equivalence class for the methods of the Range class and Data Utilities Class are as follows.
 
 # <Class:Range, Method:Equals>
 
