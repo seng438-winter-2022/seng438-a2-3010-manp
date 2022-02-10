@@ -17,7 +17,6 @@ In this lab, our goal was to test the 5 methods in the Range class and 5 methods
 In this lab, We followed Equivalence class testing and Boundary testing for the 5 methods of the Range Class as well as for the Data Utilities Class.
 
 Class:Range 
-
 Method:Equals
 
 For testing of the equals method, we used an equivalence class technique to divide input into different intervals, which are non Range object and Range object. And within the Range object, we divided it into input with equal, or different range compared to the target object. And we have boundary testing in which the input is divided into the same lower bound, same upper bound and very close values of upper and lower bound in the range object and then compares all these input Range objects with the target object.
