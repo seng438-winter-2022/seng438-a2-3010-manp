@@ -215,7 +215,7 @@ Returns:The lower bound.
 
 6.TestNullValueGetCumulativePercentages(): (Equivalent class with keys and null values)
 
-7.TestNullForMethodGetCumulativePercentages (Boundary condition with a null input)
+7.TestNullForMethodGetCumulativePercentages(): (Boundary condition with a null input)
 
 
 # Result:-
