@@ -22,14 +22,20 @@ For testing of the equals method, we used an equivalence class technique to divi
 
 Partion of Equivalence classes and Boundary testing is as follows.
 
-1.testingSameRangeObject(): (Equivalent class with same range object) 
+1.testingSameRangeObject(): (Equivalent class with same range object)
+
 2.testingDifferentRangeObject():  (Equivalent class with different range)
+
 3.testingStringObject(): (Equivalent class with different class object) 
+
 4.testingSamelowerBoundOfRangeObject(): (Boundary test with same lower boundary of range object)
+
 5.testingSameUpeerBoundRangeObject(): (Boundary test with same upper boundary of range object)
+
 6.testingCloseRangeObject(): (Boundary test with very closer values to lower and upper bound respectively)
 
-Class:Range Method:toString
+
+Class:Range         Method:toString
 
 To test the toString method, an equivalence class method is used to divide input into different classes, which is Integer Range (positive range, negative range), and decimal range. A boundary test is used to test for range lower bound equals upper bound. And when an uninitialized object is passed as an input. The passing criteria is based on using an assertEqual method to see if actual output String matches with the expected String for test method 1,2,3,4. For test method 5, we use an assertTrue function to see if there is an exception thrown out with a null input.
 
